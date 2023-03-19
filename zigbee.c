@@ -100,7 +100,7 @@ void zigbee_init(void)
     zb_set_ed_timeout(ED_AGING_TIMEOUT_64MIN);
     zb_set_keepalive_timeout(ZB_MILLISECONDS_TO_BEACON_INTERVAL(3000));
     zb_set_rx_on_when_idle(ZB_FALSE);
-    //zb_bdb_set_legacy_device_support(1); // Zigbee legacy mode (Zigbee PRO)
+    zb_bdb_set_legacy_device_support(1); // Zigbee legacy mode (Zigbee PRO)
 
     /* Initialize application context structure. */
     UNUSED_RETURN_VALUE(ZB_MEMSET(&m_dev_ctx, 0, sizeof(m_dev_ctx)));
